@@ -1,10 +1,10 @@
 import { CategoryDropdown } from "./category-dropdown";
-import type { CustomCategory } from "../types";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import type { CategoriesGetManyOutput } from "@/modules/categories/types";
 
 interface Props {
-  data: CustomCategory[];
+  data: CategoriesGetManyOutput;
 }
 
 export const Categories = ({ data }: Props) => {

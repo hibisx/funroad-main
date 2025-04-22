@@ -1,13 +1,10 @@
 import { Input } from "@/components/ui/input";
-import { ListFilterIcon, SearchIcon } from "lucide-react";
-import type { CustomCategory } from "../types";
-import { Button } from "@/components/ui/button";
+import { SearchIcon } from "lucide-react";
 interface Props {
-  data: CustomCategory[];
   disabled?: boolean;
 }
 
-export const SearchInput = ({ data, disabled }: Props) => {
+export const SearchInput = ({ disabled }: Props) => {
   return (
     <div className="flex items-center gap-2 w-full">
       <div className="relative w-full">
