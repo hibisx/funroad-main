@@ -19,8 +19,10 @@ export const NavTop = () => {
       {navTopItems.map((item) => (
         <Link href={item.href} key={item.href}>
           <Button
-            variant="navtop"
-            className={cn(pathname === item.href && "ring-1 font-bold")}
+            variant="ghost"
+            className={cn(
+              pathname === item.href && "underline underline-offset-4 font-bold"
+            )}
           >
             {item.label}
           </Button>

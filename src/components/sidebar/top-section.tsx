@@ -20,7 +20,7 @@ export const TopSection = () => {
               <Link href={item.href}>
                 <Button
                   variant="sidebar"
-                  size="fill"
+                  size="lg"
                   className={pathname === item.href ? "font-bold" : ""}
                 >
                   {item.label}

@@ -48,7 +48,7 @@ export const CategoryDropdown = ({
     >
       <div className="relative">
         <Button
-          variant="select"
+          variant="fliter"
           size="sm"
           className={cn(
             isActive && !isNavigationHovered && "bg-white border",

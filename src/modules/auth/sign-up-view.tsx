@@ -20,20 +20,23 @@ import type z from "zod";
 import { Logo } from "@/components/logo";
 import { cn } from "@/lib/utils";
 import { useTRPC } from "@/trpc/client";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 export const SignUpView = () => {
-  const trpc = useTRPC();
   const router = useRouter();
+  const trpc = useTRPC();
+  const queryClient = useQueryClient();
+
   const register = useMutation(
     trpc.auth.register.mutationOptions({
       onError: (error) => {
         toast.error(error.message);
       },
-      onSuccess: () => {
+      onSuccess: async () => {
         toast.success("Account created successfully");
+        await queryClient.invalidateQueries(trpc.auth.session.queryFilter());
         router.push("/");
       },
     })
@@ -70,7 +73,9 @@ export const SignUpView = () => {
             </Button>
           </Link>
         </div>
-        <h1 className="text-3xl font-semibold text-center">Welcome</h1>
+        <h1 className="text-3xl font-semibold">
+          Join us to have your own store
+        </h1>
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}

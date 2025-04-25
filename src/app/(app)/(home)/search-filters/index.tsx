@@ -18,7 +18,7 @@ export const SearchFilters = () => {
 
 export const SearchFiltersSkeleton = () => {
   return (
-    <div className="px-4 lg:px-8 py-6 border-b flex flex-col gap-4 w-full">
+    <div className="px-4 lg:px-8 py-6 border-b flex flex-col gap-4 w-6xl">
       <SearchInput disabled />
       <div>
         <div className="h-10" />

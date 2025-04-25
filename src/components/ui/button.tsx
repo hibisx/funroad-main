@@ -10,11 +10,11 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "rounded-md border bg-primary/20 hover:shadow-[2px_2px_0px_0px] hover:shadow-black hover:-translate-x-[2px] hover:-translate-y-[1px]",
-        select:
-          "rounded-sm border border-transparent hover:border-border hover:bg-white hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)]",
-        navtop:
-          "rounded-md hover:bg-accent hover:text-accent-foreground hover:ring-1 cursor-pointer dark:hover:bg-accent/50",
+          "rounded-md border bg-primary/10 hover:shadow-[2px_2px_0px_0px] hover:shadow-black hover:-translate-x-[2px] hover:-translate-y-[1px]",
+        fliter:
+          "rounded-sm border border-transparent hover:border-border hover:bg-white hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:-translate-x-[2px] hover:-translate-y-[1px]",
+        ghost:
+          "rounded-md border border-transparent hover:bg-accent hover:text-accent-foreground hover:border-border cursor-pointer dark:hover:bg-accent/50",
         sidebar:
           "rounded-none w-full hover:bg-sky-200 hover:text-accent-foreground cursor-pointer justify-start",
         primary:
@@ -25,16 +25,13 @@ const buttonVariants = cva(
           "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
         secondary:
           "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
-        ghost:
-          "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
-        link: "text-primary underline underline-offset-4 hover:-translate-x-[1px] hover:-translate-y-[2px]",
+        link: "text-primary underline underline-offset-3 hover:translate-x-[2px]",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
         sm: "h-7 gap-1.5 px-3 has-[>svg]:px-2.5",
         lg: "h-11 px-6 has-[>svg]:px-4",
         icon: "size-9",
-        fill: "h-11 px-10",
       },
     },
     defaultVariants: {
