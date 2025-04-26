@@ -11,8 +11,8 @@ const buttonVariants = cva(
       variant: {
         default:
           "rounded-md border bg-primary/10 hover:shadow-[2px_2px_0px_0px] hover:shadow-black hover:-translate-x-[2px] hover:-translate-y-[1px]",
-        fliter:
-          "rounded-sm border border-transparent hover:border-border hover:bg-white hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:-translate-x-[2px] hover:-translate-y-[1px]",
+        filter:
+          "rounded-sm border border-transparent hover:border-border hover:bg-white hover:shadow-[2px_2px_0px_0px] hover:shadow-black hover:-translate-x-[1px] hover:-translate-y-[1px]",
         ghost:
           "rounded-md border border-transparent hover:bg-accent hover:text-accent-foreground hover:border-border cursor-pointer dark:hover:bg-accent/50",
         sidebar:

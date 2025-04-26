@@ -1,8 +1,12 @@
 import { SidebarInset } from "@/components/ui/sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
-import AppHeader from "@/components/header/app-haeder";
-import AppSidebar from "@/components/sidebar/app-sidebar";
-import { SearchFilters, SearchFiltersSkeleton } from "./search-filters";
+import AppHeader from "@/modules/home/header/app-haeder";
+import AppSidebar from "@/modules/home/sidebar/app-sidebar";
+import {
+  SearchFilters,
+  SearchFiltersSkeleton,
+} from "@/modules/home/search-filters";
+
 import { getQueryClient, trpc } from "@/trpc/server";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import { Suspense } from "react";

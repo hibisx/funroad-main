@@ -4,7 +4,7 @@ import {
   SidebarMenu,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { navTopItems } from "@/components/header/nav-top";
+import { navTopItems } from "@/modules/home/header/nav-top";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

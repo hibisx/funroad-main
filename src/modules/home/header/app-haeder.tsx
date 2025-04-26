@@ -4,12 +4,12 @@ import { NavTop } from "./nav-top";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { AuthButton } from "@/components/auth-button";
-import { Logo } from "../logo";
+import { Logo } from "../../../components/logo";
 import { useTRPC } from "@/trpc/client";
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
 import { LayoutDashboardIcon } from "lucide-react";
-import { Button } from "../ui/button";
+import { Button } from "../../../components/ui/button";
 
 const AppHeader = () => {
   const isMobile = useIsMobile();

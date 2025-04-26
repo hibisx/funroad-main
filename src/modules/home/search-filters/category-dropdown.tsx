@@ -48,15 +48,14 @@ export const CategoryDropdown = ({
     >
       <div className="relative">
         <Button
-          variant="fliter"
+          variant="filter"
           size="sm"
           className={cn(
-            isActive && !isNavigationHovered && "bg-white border",
-            isOpen &&
-              "bg-white border-border shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)]"
+            isActive && !isNavigationHovered && "bg-white border-border",
+            isOpen && "bg-white border-border"
           )}
         >
-          <Link href={`/categories/${category.slug}`}>{category.name}</Link>
+          <Link href={`/${category.slug}`}>{category.name}</Link>
         </Button>
       </div>
       <SubcategoryMenu
