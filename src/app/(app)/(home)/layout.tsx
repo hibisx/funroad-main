@@ -16,11 +16,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   void queryClient.prefetchQuery(trpc.categories.getMany.queryOptions());
 
   return (
-    <SidebarProvider defaultOpen={true}>
+    <SidebarProvider defaultOpen={false}>
       <AppHeader />
       <div className="pt-16 flex w-full">
         <SidebarInset className="bg-background w-full">
-          <div className="max-w-6xl flex flex-col mx-auto">
+          <div className="flex flex-col">
             <HydrationBoundary state={dehydrate(queryClient)}>
               <Suspense fallback={<SearchFiltersSkeleton />}>
                 <SearchFilters />

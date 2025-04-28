@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 export const AuthButton = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,21 +19,17 @@ export const AuthButton = () => {
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <p className="px-4 py-2">Login</p>
-      <div className="absolute z-100 right-0 top-0">
+      <div className="px-4 py-2">Login</div>
+      <div className="absolute z-100 right-0 top-0.5">
         {isOpen && (
-          <div className="w-36 bg-white overflow-hidden flex flex-col border rounded-md shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)]">
-            <Link
-              href="/sign-in"
-              className="w-full text-left px-4 py-2 flex items-center underline font-medium hover:bg-sky-200"
-            >
-              Login
+          <div className="flex bg-white border rounded-md overflow-hidden">
+            <Link href="/sign-up">
+              <Button variant="sidebar" className="border-r">
+                New account
+              </Button>
             </Link>
-            <Link
-              href="/sign-up"
-              className="w-full text-left px-4 py-2 flex items-center underline font-medium hover:bg-sky-200"
-            >
-              New account
+            <Link href="/sign-in">
+              <Button variant="sidebar">Login</Button>
             </Link>
           </div>
         )}

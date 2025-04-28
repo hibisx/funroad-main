@@ -1,10 +1,11 @@
 "use client";
 
-import { CategoryDropdown } from "./category-dropdown";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import type { CategoriesGetManyOutput } from "@/modules/categories/types";
 import { useParams } from "next/navigation";
+
+import type { CategoriesGetManyOutput } from "@/modules/categories/types";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { CategoryDropdown } from "./category-dropdown";
+
 interface Props {
   data: CategoriesGetManyOutput;
 }
@@ -15,18 +16,16 @@ export const Categories = ({ data }: Props) => {
   const activeCategory = categoryParam || "all";
 
   return (
-    <div className="relative w-full">
-      <div className="flex flex-wrap items-center gap-2">
-        {data.map((category) => (
-          <div key={category.id}>
-            <CategoryDropdown
-              category={category}
-              isActive={activeCategory === category.slug}
-              isNavigationHovered={false}
-            />
-          </div>
-        ))}
-      </div>
+    <div className="flex items-center flex-wrap gap-2">
+      {data.map((category) => (
+        <div key={category.id}>
+          <CategoryDropdown
+            category={category}
+            isActive={activeCategory === category.slug}
+            isNavigationHovered={false}
+          />
+        </div>
+      ))}
     </div>
   );
 };
