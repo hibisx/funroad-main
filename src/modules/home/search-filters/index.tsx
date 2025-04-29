@@ -5,7 +5,7 @@ import { Categories } from "./categories";
 import { useTRPC } from "@/trpc/client";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { useParams } from "next/navigation";
-import { DEFAULT_CATEGORY_COLOR } from "../constants";
+import { DEFAULT_CATEGORY_COLOR } from "@/constants";
 import { BreadcrumbNav } from "./breadcrumb-nav";
 
 export const SearchFilters = () => {
@@ -35,11 +35,11 @@ export const SearchFilters = () => {
     >
       <SearchInput />
       <Categories data={data} />
-      <BreadcrumbNav
+      {/* <BreadcrumbNav
         activeCategory={activeCategory}
         activeCategoryName={activeCategoryName}
         activeSubcategoryName={activeSubcategoryName}
-      />
+      /> */}
     </div>
   );
 };

@@ -22,7 +22,7 @@ export const SearchInput = ({ disabled }: Props) => {
         />
       </div>
       {session.data?.user && (
-        <Link href="/library">
+        <Link href="/">
           <Button>
             <BookmarkCheckIcon className="size-4" />
             Library

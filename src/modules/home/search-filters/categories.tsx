@@ -3,7 +3,6 @@
 import { useParams } from "next/navigation";
 
 import type { CategoriesGetManyOutput } from "@/modules/categories/types";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { CategoryDropdown } from "./category-dropdown";
 
 interface Props {
@@ -16,7 +15,7 @@ export const Categories = ({ data }: Props) => {
   const activeCategory = categoryParam || "all";
 
   return (
-    <div className="flex items-center flex-wrap gap-2">
+    <div className="flex items-center flex-wrap gap-1">
       {data.map((category) => (
         <div key={category.id}>
           <CategoryDropdown
